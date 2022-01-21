@@ -90,9 +90,8 @@
   					  <option value="1">Admin</option>
   					  <option value="2">Employee</option>
   					</select>
-						<input type="submit" name="loginBtn" value="Login">
+						<input type="submit" name="caccountBtn" value="Save">
 						<br/>
-						<a href="#" onclick="myFunction()">Show password</a><br>
 					</form> 
 		</div>
 	</div>
