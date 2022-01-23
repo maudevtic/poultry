@@ -6,14 +6,18 @@
 		$pass = $_POST['password'];
 		try {
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
-			$result = $conn->query($sql);
+			$result = $conn->query("SELECT * FROM users WHERE username='$user' AND password='$pass'");
 			$count = $result->fetchColumn();
-			if ($count>=1) {
+			$result->execute();
+			$result1 = $result->fetch();
+			$status = $result1['status'];
+			if ($count>=1 && $status == 1) {
 				session_start();
 				$_SESSION['username'] = $user;
 				$_SESSION['password'] = $pass;
-				header("location:home.php");
+				echo "<script>alert('Sucessfully Login.');window.location.href='home.php';</script>";
+			} else if ($count>=1) {
+				echo "<p style = 'color:yellow;background:red;text-align:center;padding:2px 0 2px 0'>Your account is not yet approve.</p>";
 			} else {
 				echo "<p style = 'color:yellow;background:red;text-align:center;padding:2px 0 2px 0'>Incorrect password or username!</p>";
 			}

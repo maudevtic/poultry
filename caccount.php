@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>INTERGRIS POULTRY FARM</title>
+	<title>IPF|Create Account</title>
 	<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
 	<style type="text/css">
 		body {
@@ -81,14 +81,15 @@
 				<h1>INTEGRIS POULTRY FARM</h1>
 					<?php include "query/caccountQuery.php"; ?>
 					<form action="" method="POST">
-						<p>Username</p>
-						<input type="text" name="username" placeholder="Enter Username"><br/>
+						<p>Email</p>
+						<input type="text" name="username" placeholder="Enter your E-mail"><br/>
 						<p>Password</p>
-						<input type="password" name="password" id="myInput" placeholder="Enter Password"><br/>
+						<input type="password" name="password" id="password" placeholder="Enter your Password"><br/>
+            <p>Confirm Password</p>
+						<input type="password" name="cpassword" id="password" placeholder="Confirm your Password"><br/>
 						<select class="custom-select" style="width:200px;" name="type">
-  					  <option value="0">Select Type:</option>
-  					  <option value="1">Admin</option>
-  					  <option value="2">Employee</option>
+  					  <option value="0">Admin</option>
+  					  <option value="1">User</option>
   					</select>
 						<input type="submit" name="caccountBtn" value="Save">
 						<br/>

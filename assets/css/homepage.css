@@ -23,30 +23,31 @@ h1{
     width: 800px;
 
  }
- .columns div{
-     width: 50%;
-     padding: .5em;
-     margin: 2px;
-     text-align: center;
-     background-color:grey;
-     border:solid black 1px;
+ .columns div {
+    width: 50%;
+    padding: .5em;
+    margin: 2px;
+    text-align: center;
+    background-color:grey;
+    border:solid black 1px;
 
 
  }
- span{
-     width: 100%;
-     padding: .5em;
-     margin: 2px;
-     text-align: center;
-     background-color:grey;
-     border:solid black 1px;
-     color: white
+ 
+span {
+    width: 100%;
+    padding: .5em;
+    margin: 2px;
+    text-align: center;
+    background-color:grey;
+    border:solid black 1px;
+    color: white;
 
+}
 
- }
- a{
-     text-decoration: none;
-     color: white;
+a {
+    text-decoration: none;
+    color: white;
  }
 
 .button {
@@ -68,7 +69,7 @@ h1{
 
 
 .hov:hover{
-     cursor:pointer;
+    cursor:pointer;
     background: #65cca2;    
     color: white;
 }
