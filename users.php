@@ -130,13 +130,24 @@
                             <td><?php echo $rowtFetchAllUsers['created_at']; ?></td>
                             <td>
                                 <?php
-                                    if ($rowtFetchAllUsers['type']==='0') {
+                                    if ($_SESSION['type']==='0' && $_SESSION['status']==='1') {
+                                        if ($rowtFetchAllUsers['status']==='1') {
                                 ?>
                                     <button class="button buttonblue">Approve</button>
                                     <button class="button buttongreen">Update</button>
                                     <button class="button buttonred">Delete</button>
                                 <?php
-                                    } else {
+                                        } else if ($rowtFetchAllUsers['status']==='0') {
+                                ?>
+                                    <button class="button buttongreen">Update</button>
+                                    <button class="button buttonred">Delete</button>
+                                <?php
+                                        }
+                                    } else if ($_SESSION['type']==='1') {
+                                ?>
+                                    <button class="button buttongreen">Update</button>
+                                <?php
+                                    } else if ($_SESSION['type']==='0') {
                                 ?>
                                     <button class="button buttongreen">Update</button>
                                 <?php

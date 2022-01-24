@@ -57,14 +57,16 @@
             <div class="columns">
                 <a href="javascript:history.back()">
                     <div class="hov">
-                        <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
-                        <a href="javascript:history.back()"><h3>Back</h3></a>
+                        <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px" title="Back"></p>
+                        <a href="javascript:history.back()">
+                            <!-- <h3>Back</h3> -->
+                        </a>
                     </div>
                 </a>
                 <a href="costperbird.php">
                     <div class="hov">
-                        <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p>
-                        <a href="costperbird.php"><h3>COST/BIRD & RETURN BIRD DETAILS</h3></a>
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="costperbird.php" title="Cost per bird"><h3>COST/BIRD & RETURN BIRD DETAILS</h3></a>
                     </div>
                 </a>
             </div>
@@ -73,13 +75,13 @@
             <div class="columns">
                 <a href="brooderweeklyreport.php">
                     <div class="hov">
-                        <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p>
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
                         <a href="brooderweeklyreport.php"><h3>BROODER WEEKLY REPORT</h3></a>
                     </div>
                 </a>
                 <a href="costperchickreport.php">
                     <div class="hov">
-                        <p><img src="assets/images/chic.png" alt="Cinque Terre" width="50px" height="50px"></p>
+                        <!-- <p><img src="assets/images/chic.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
                         <a href="costperchickreport.php"><h3>COST PER CHICK REPORT</h3></a>
                     </div>
                 </a>
@@ -89,13 +91,13 @@
             <div class="columns">
                 <a href="mortalityreport.php">
                     <div class="hov">
-                        <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p>
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
                         <a href="mortalityreport.php"><h3>MORTALITY</h3></a>
                     </div>
                 </a>
                 <a href="birdtranferreport.php">
                     <div class="hov">
-                        <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p>
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
                         <a href="birdtranferreport.php"><h3>BIRD TRANSFER</h3></a>
                     </div>
                 </a>
