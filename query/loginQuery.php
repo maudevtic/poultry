@@ -14,6 +14,7 @@
 				session_start();
 				$_SESSION['username'] = $user;
 				$_SESSION['password'] = $pass;
+				$_SESSION['id'] = $result1['id'];
 				$_SESSION['status'] = $result1['status'];
 				$_SESSION['type'] = $result1['type'];
 				echo "<script>alert('Sucessfully Login.');window.location.href='home.php';</script>";

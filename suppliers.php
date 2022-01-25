@@ -44,6 +44,11 @@
     </style>
 </head>
 <body>
+    <div>
+        <a href="javascript:history.back()">
+            <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
+        </a>
+    </div>
     <!-- <div class="bg">
         <div class="header">
             <h1><img src="assets/images/integris.png" alt="Cinque Terre" width="400px" height="80px"></h1>

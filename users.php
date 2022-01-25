@@ -34,6 +34,7 @@
 	$conn = null;
 
     $username = $result['username'];
+    $id = $result['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,25 +132,24 @@
                             <td>
                                 <?php
                                     if ($_SESSION['type']==='0' && $_SESSION['status']==='1') {
-                                        if ($rowtFetchAllUsers['status']==='1') {
+                                        if ($rowtFetchAllUsers['status']==='0') {
                                 ?>
-                                    <button class="button buttonblue">Approve</button>
-                                    <button class="button buttongreen">Update</button>
-                                    <button class="button buttonred">Delete</button>
-                                <?php
-                                        } else if ($rowtFetchAllUsers['status']==='0') {
-                                ?>
-                                    <button class="button buttongreen">Update</button>
-                                    <button class="button buttonred">Delete</button>
+                                    <a class="button buttonblue" name="approve" onclick="javascript: return confirm('Please confirm to approve.');" href="query/accountapprove.php?id=<?php echo $rowtFetchAllUsers['id']; ?>">Approve</a>
                                 <?php
                                         }
-                                    } else if ($_SESSION['type']==='1') {
                                 ?>
-                                    <button class="button buttongreen">Update</button>
+                                    <a class="button buttongreen" name="update" href="accountedit.php?id=<?php echo $rowtFetchAllUsers['id']; ?>">Update</a>
+                                    <a class="button buttonred" name="delete" onclick="javascript: return confirm('Please confirm to delete.');" href="query/accountdelete.php?id=<?php echo $rowtFetchAllUsers['id']; ?>">Delete</a>
+                                <?php
+                                        
+                                    } else if ($_SESSION['type']==='1' && ($_SESSION['id']===$rowtFetchAllUsers['id'])) {
+                                ?>
+                                    <a class="button buttongreen" name="update" href="accountedit.php?id=<?php echo $rowtFetchAllUsers['id']; ?>">Update</a>
                                 <?php
                                     } else if ($_SESSION['type']==='0') {
                                 ?>
-                                    <button class="button buttongreen">Update</button>
+                                    <a class="button buttongreen" name="update" href="accountedit.php?id=<?php echo $rowtFetchAllUsers['id']; ?>">Update</a>
+                                    
                                 <?php
                                     }
                                 ?>

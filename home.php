@@ -55,22 +55,6 @@
         </div>
         <div class="center">
             <div class="columns" >
-                <a href="users.php">
-                    <div class="hov">
-                        <p><img src="assets/images/users.png" alt="Cinque Terre" width="70px" height="40px"></p>
-                        <a href="users.php"><h4>Users</h4></a>
-                    </div>
-                </a>
-                <a href="totalreport.php">
-                    <div class="hov">
-                        <p><img src="assets/images/signout.png" alt="Cinque" Terre width="58px" height="40px"></p>
-                        <a href="users.php"><h4>Logout</h4></a>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="center">
-            <div class="columns" >
                 <a href="birdreports.php">
                     <div class="hov">
                         <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="40px"></p>
@@ -97,6 +81,16 @@
                     <div class="hov">
                         <p><img src="assets/images/flockwise.png" alt="Cinque Terre"  width="50px" height="40px"></p>
                         <a href="flockwise.php"><h4>Flockwise</h4></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="column">
+                <a href="users.php">
+                    <div class="hov">
+                        <p><img src="assets/images/users.png" alt="Cinque Terre" width="70px" height="40px"></p>
+                        <a href="users.php"><h4>Users</h4></a>
                     </div>
                 </a>
             </div>
@@ -133,7 +127,7 @@
                 </a>
             </div>
         </div>
-        <!-- <div class="center">
+        <div class="center">
             <div class="columns1">
                 <div >
                    <form action="" method="POST">
@@ -141,7 +135,7 @@
                    </form>
                 </div>  
             </div>
-        </div> -->
+        </div>
     </div>
 </body>
 </html>

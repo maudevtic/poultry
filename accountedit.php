@@ -1,9 +1,35 @@
 
+<?php
+  session_start();
+  include 'connection.php';
+  $user = $_SESSION['username'];
+  $pass = $_SESSION['password'];
+  if (!isset($user) && !isset($pass)) {
+    header("location:index.php?loginRequired");
+  }
+
+  if (isset($_POST['logout'])) {
+    session_unset();
+    session_destroy();
+    header("location:index.php");
+  }
+	$id=$_GET['id'];
+  try {
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$statement = $conn->query("SELECT * FROM users WHERE id='$id'");
+		$statement->execute();
+		$result = $statement->fetch();
+	} catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+  $username = $result['username'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>IPF|Create Account</title>
-	<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+	<title>IPF|Update Account</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<style type="text/css">
     body, html {
       height: 100%;
@@ -19,7 +45,7 @@
     	left: 50%;
     	position: absolute;
     	transform: translate(-50%, -50%);
-    	box-sizing:border-box;
+    	box-sizing: border-box;
     	padding: 70px 30px;
     } 
 
@@ -84,38 +110,43 @@
     }
 
     .loginbox input[type = "checkbox"] {
-    	float:right;
+    	float: right;
     }
     
 		body {
-			background:url(assets/images/loginBackground.jpg);
+			background: url(assets/images/loginBackground.jpg);
 			margin: 0;
 			padding: 0;
 			background-size: cover;
 			background-position: center;
 			font-family: sans-serif;
 		}
-
 	</style>
 </head>
 <body>
+<div >
+        <a href="javascript:history.back()">
+            <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
+        </a>
+    </div>
 	<div class="bg">
 		<div class="loginbox">
 			<img src="assets/images/loginIcon.png" class="avatar">
 				<h1>INTEGRIS POULTRY FARM</h1>
-					<?php include "query/caccountQuery.php"; ?>
+					<?php include "query/accountupdate.php"; ?>
 					<form action="" method="POST">
+						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						<label>Email/Username</label>
-						<input type="text" name="username" placeholder="Enter your E-mail"><br/>
+						<input type="text" name="usernameedit" value="<?php echo $result['username']; ?>"><br/>
 						<label>Password</label>
-						<input type="password" name="password" id="password" placeholder="Enter your Password"><br/>
+						<input type="password" name="passwordedit" id="passwordedit" value="<?php echo $result['password']; ?>"><br/>
             <label>Confirm Password</label>
-						<input type="password" name="cpassword" id="password" placeholder="Confirm your Password"><br/>
-						<select name="type" style="width: 266px">
-  					  <option value="0">Admin</option>
-  					  <option value="1">User</option>
+						<input type="password" name="cpasswordedit" id="cpasswordedit" value="<?php echo $result['password']; ?>"><br/>
+						<select name="typeedit" style="width: 266px">
+  					  <option value="0" <?php if ($result['type']==='0') { echo "selected"; } ?>>Admin</option>
+  					  <option value="1" <?php if ($result['type']==='1') { echo "selected"; } ?>>User</option>
   					</select><br><br>
-						<input type="submit" name="caccountBtn" value="Save">
+						<input type="submit" name="caccountupdateBtn" value="Save">
 						<br/>
 					</form> 
 		</div>
