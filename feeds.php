@@ -34,7 +34,7 @@
     <title>IPF|Feeds</title>
     <style>
         body {
-			background: url(assets/images/underConstruction.webp) no-repeat;
+			background: url(assets/images/homepagebg.jpeg) no-repeat;
             background-attachment: fixed;
             background-size: cover;
 	        background-position: center;
@@ -43,20 +43,59 @@
     </style>
 </head>
 <body>
-    <div >
-        <a href="javascript:history.back()">
-            <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
-        </a>
-    </div>
-    <!-- <div class="bg">
+    <div class="bg">
         <div class="header">
             <h1><img src="assets/images/integris.png" alt="Cinque Terre" width="400px" height="80px"></h1>
         </div>
         <div class="center">
             <div class="columns">
-                <span>Feeds | Logged as: <?php echo ucwords($username); ?></span>
+                <span><h2>Feeds | Logged as: <?php echo ucwords($username); ?></h2></span>
             </div>
         </div>
-    </div> -->
+        <div class="center">
+            <div class="columns">
+                <a href="javascript:history.back()">
+                    <div class="hov">
+                        <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px" title="Back"></p>
+                        <a href="javascript:history.back()">
+                            <!-- <h3>Back</h3> -->
+                        </a>
+                    </div>
+                </a>
+                <a href="feedconsumption.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="feedconsumption.php" title="Cost per bird"><h3>FEED CONSUMPTION</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns">
+                <a href="feeddetails.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="feeddetails.php"><h3>FEED DETAILS</h3></a>
+                    </div>
+                </a>
+                <!-- <a href="comparisonreport.php">
+                    <div class="hov">
+                        <p><img src="assets/images/chic.png" alt="Cinque Terre" width="50px" height="50px"></p>
+                        <a href="comparisonreport.php"><h3>COMPARISON REPORT</h3></a>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns1">
+                <div>
+                    <form action="" method="POST">
+                        <p><button class="button" name="logout"><img src="assets/images/signout.png" alt="Cinque" Terre width="58px" height="50px"></button></p>
+                        <input type="submit" name="logout" id="signout" value="Signout">
+                   </form>
+                </div>  
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -99,13 +99,13 @@
             <div class="columns">
                 <a href="vaccinations.php">
                     <div class="hov">
-                        <!-- <p><img src="assets/images/vaccine.png" alt="Cinque Terre"  width="50px" height="40px"></p> -->
+                        <p><img src="assets/images/vaccine.png" alt="Cinque Terre"  width="50px" height="40px"></p>
                         <a href="vaccinations.php"><h4>Vaccination</h4></a>
                     </div>
                 </a>
                 <a href="actualvsstandard.php">
                     <div class="hov">
-                        <!-- <p><img src="assets/images/vs.png" alt="Cinque Terre" width="50px" height="40px"></p> -->
+                        <p><img src="assets/images/vs.png" alt="Cinque Terre" width="50px" height="40px"></p>
                         <a href="actualvsstandard.php"><h4>Actual vs Standard</h4></a>
                     </div>
                 </a> 
@@ -115,13 +115,13 @@
             <div class="columns">
                 <a href="employees.php">
                     <div class="hov">
-                        <!-- <p><img src="assets/images/employee.png" alt="Cinque" Terre width="50px" height="40px"></p> -->
+                        <p><img src="assets/images/employee.png" alt="Cinque" Terre width="50px" height="40px"></p>
                         <a href="employees.php"><h4>Employees</h4></a>
                     </div>
                 </a>
                 <a href="suppliers.php">
                     <div class="hov">
-                        <!-- <p><img src="assets/images/supplier.png" alt="Cinque Terre" width="50px" height="40px"></p> -->
+                        <p><img src="assets/images/supplier.png" alt="Cinque Terre" width="50px" height="40px"></p>
                         <a href="suppliers.php"><h4>Supplier</h4></a>
                     </div>
                 </a>

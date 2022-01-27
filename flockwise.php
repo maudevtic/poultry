@@ -34,7 +34,7 @@
     <title>IPF|Flockwise</title>
     <style>
         body {
-			background:url(assets/images/underConstruction.webp);
+			background: url(assets/images/homepagebg.jpeg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -44,20 +44,59 @@
     </style>
 </head>
 <body>
-    <div >
-        <a href="javascript:history.back()">
-            <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
-        </a>
-    </div>
-    <!-- <div class="bg">
+    <div class="bg">
         <div class="header">
             <h1><img src="assets/images/integris.png" alt="Cinque Terre" width="400px" height="80px"></h1>
         </div>
         <div class="center">
             <div class="columns">
-                <span>Flockwise | Logged as: <?php echo ucwords($username); ?></span>
+                <span><h2>Flockwise | Logged as: <?php echo ucwords($username); ?></h2></span>
             </div>
         </div>
-    </div> -->
+        <div class="center">
+            <div class="columns">
+                <a href="javascript:history.back()">
+                    <div class="hov">
+                        <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px" title="Back"></p>
+                        <a href="javascript:history.back()">
+                            <!-- <h3>Back</h3> -->
+                        </a>
+                    </div>
+                </a>
+                <a href="weeklynflock.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="weeklynflock.php" title="Weekly and Flock"><h3>WEEKLY AND FLOCK</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns">
+                <a href="iffwp.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="iffwp.php"><h3>INDIVIDUAL FARM FLOCK WISE PERFORMANCE</h3></a>
+                    </div>
+                </a>
+                <a href="fusafd.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/chic.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="fusafd.php"><h3>FARM, UNIT, SHED AND FLOCK DETAILS</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns1">
+                <div>
+                    <form action="" method="POST">
+                        <p><button class="button" name="logout"><img src="assets/images/signout.png" alt="Cinque" Terre width="58px" height="50px"></button></p>
+                        <input type="submit" name="logout" id="signout" value="Signout">
+                   </form>
+                </div>  
+            </div>
+        </div>
+    </div>
 </body>
 </html>

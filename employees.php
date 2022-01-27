@@ -34,7 +34,7 @@
     <title>IPF|Employees</title>
     <style>
         body {
-			background:url(assets/images/underConstruction.webp);
+			background:url(assets/images/homepagebg.jpeg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -44,20 +44,69 @@
     </style>
 </head>
 <body>
-    <div >
-        <a href="javascript:history.back()">
-            <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px"></p>
-        </a>
-    </div>
-    <!-- <div class="bg">
+<div class="bg">
         <div class="header">
             <h1><img src="assets/images/integris.png" alt="Cinque Terre" width="400px" height="80px"></h1>
         </div>
         <div class="center">
             <div class="columns">
-                <span>Employees | Logged as: <?php echo ucwords($username); ?></span>
+                <span><h2>Employees | Logged as: <?php echo ucwords($username); ?></h2></span>
             </div>
         </div>
-    </div> -->
+        <div class="center">
+            <div class="columns">
+                <a href="javascript:history.back()">
+                    <div class="hov">
+                        <p><img src="assets/images/back.png" alt="Cinque Terre" width="70px" height="50px" title="Back"></p>
+                        <a href="javascript:history.back()">
+                            <!-- <h3>Back</h3> -->
+                        </a>
+                    </div>
+                </a>
+                <a href="poe.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="poe.php" title=""><h3>PROFILE OF EMPLOYEES</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns">
+                <a href="payroll.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="payroll.php"><h3>PAYROLL OF EMPLOYEES</h3></a>
+                    </div>
+                </a>
+                <a href="amoe.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/chic.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="amoe.php"><h3>ATTENDANCE MANAGEMENT OF EMPLOYEES</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns">
+                <a href="tsoe.php">
+                    <div class="hov">
+                        <!-- <p><img src="assets/images/bird.png" alt="Cinque Terre" width="50px" height="50px"></p> -->
+                        <a href="tsoe.php"><h3>TASK SCHEDULER OF EMPLOYEES</h3></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="columns1">
+                <div>
+                    <form action="" method="POST">
+                        <p><button class="button" name="logout"><img src="assets/images/signout.png" alt="Cinque" Terre width="58px" height="50px"></button></p>
+                        <input type="submit" name="logout" id="signout" value="Signout">
+                   </form>
+                </div>  
+            </div>
+        </div>
+    </div>
 </body>
 </html>
